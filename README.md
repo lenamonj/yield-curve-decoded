@@ -19,6 +19,19 @@
 
 ---
 
+## Results
+
+| Metric | Value |
+|--------|-------|
+| **PCA: Variance Explained (3 factors)** | 100.0% |
+| **Recession Model ROC-AUC** | 0.72 (test set, 2011-2026) |
+| **Recession Model PR-AUC** | 0.11 (vs 0.07 baseline) |
+| **Current 12-Month Recession Probability** | 31.6% (CAUTIOUS) |
+
+Three PCA factors capture virtually all yield curve variation across 45 years. The slope factor (PC2) visibly inverts before every recession in the dataset. The XGBoost recession model, trained on 4 recessions (1981-2009) and tested out-of-sample on 2011-2026, produces a calibrated probability that updates every time the notebook runs.
+
+---
+
 ## What It Does
 
 | Section | What It Covers |
